@@ -11,7 +11,7 @@ public class FilmsRepository {
         items = tmp;
     }
 
-    /*  public void newShit(int id) { //это должна быть какая-то вещь, которая делает хуй пойми что
+    /*  public void newShit(int id) { //это должна быть какая-то вещь, которая делает  пойми что
            ////?????????????????
           int number = 5;
            FilmList[] tmp = new FilmList[number];
@@ -26,7 +26,7 @@ public class FilmsRepository {
        }
 
      */
-    public void findLast(int id) { //это должна быть какая-то вещь, которая делает хуй пойми что
+    public void findLast(int id) { //это должна быть какая-то вещь, которая делает пойми что
         ////?????????????????
         FilmList[] tmp = new FilmList[items.length - 1];
         int copyToIndex = 0;
