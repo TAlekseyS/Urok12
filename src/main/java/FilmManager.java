@@ -1,4 +1,4 @@
-public class FilmManager {
+/*public class FilmManager {
     private FilmsRepository repo;
 
     public FilmManager(FilmsRepository repo) {
@@ -31,3 +31,4 @@ public class FilmManager {
 
 
 }
+*/

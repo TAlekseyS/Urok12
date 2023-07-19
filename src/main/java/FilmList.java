@@ -1,4 +1,4 @@
-public class FilmList {
+/*public class FilmList {
     //private int title;
     private int id;
     private int number;
@@ -20,3 +20,4 @@ public class FilmList {
 
 
 }
+*/

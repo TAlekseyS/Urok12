@@ -3,11 +3,75 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class FilmManagerTests {
+    FilmsRepository manager = new FilmsRepository(5);
 
-    FilmsRepository repo = new FilmsRepository();
-    FilmManager manager = new FilmManager(repo);
+    @BeforeEach
+    public void setup() {
+        manager.add("Movie 1");
+        manager.add("Movie 2");
+        manager.add("Movie 3");
+    }
+
+    @Test
+    public void shouldAllPosters() {
+
+        String[] expected = {"Movie 1", "Movie 2", "Movie 3"};
+        String[] actual = manager.findAll();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void Should7Posters() {
+        FilmsRepository manager = new FilmsRepository();
+
+        manager.add("Movie 1");
+        manager.add("Movie 2");
+        manager.add("Movie 3");
+        manager.add("Movie 4");
+        manager.add("Movie 5");
+        manager.add("Movie 6");
+        manager.add("Movie 7");
 
 
+        String[] expected = {"Movie 7", "Movie 6", "Movie 5", "Movie 4", "Movie 3", "Movie 2", "Movie 1"};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void should3Posters() {
+
+        //manager.add("Movie 1");
+        // manager.add("Movie 2");
+        // manager.add("Movie 3");
+
+        String[] expected = {"Movie 3", "Movie 2", "Movie 1"};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+
+    @Test
+    public void shouldPostersLimit() {
+
+        manager.add("Movie 4");
+        manager.add("Movie 5");
+
+
+        String[] expected = {"Movie 5", "Movie 4", "Movie 3", "Movie 2", "Movie 1"};
+        String[] actual = manager.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+}
+
+// FilmsRepository repo = new FilmsRepository();
+//  FilmManager manager = new FilmManager(repo);
+
+/*
     FilmList item1 = new FilmList(1, "Джентельмены");
     FilmList item2 = new FilmList(2, "Бладшот");
     FilmList item3 = new FilmList(3, "Вперёд");
@@ -40,7 +104,7 @@ public class FilmManagerTests {
     }
 
     */
-
+/*
     @Test
     public void findAll() {
         FilmsRepository repo = new FilmsRepository();
@@ -71,4 +135,4 @@ public class FilmManagerTests {
     }
 
 
-}
+}*/

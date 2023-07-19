@@ -1,4 +1,4 @@
-public class Main {
+/*public class Main {
     public static void main(String[] args) {
 
         String[] films = {
@@ -20,18 +20,18 @@ public class Main {
         films = tmp;
 */
 
-        String removeFilm = "Тролли. Мировой тур";
+    //    String removeFilm = "Тролли. Мировой тур";
 
-        String[] tmp = new String[films.length - 1];
-        int copyToIndex = 0;
-        for (String film : films) {
-            if (!film.equals(removeFilm)) {
-                tmp[copyToIndex] = film;
-                copyToIndex++;
-            }
-        }
-        films = tmp;
+    //    String[] tmp = new String[films.length - 1];
+    //    int copyToIndex = 0;
+      //  for (String film : films) {
+      //      if (!film.equals(removeFilm)) {
+    //            tmp[copyToIndex] = film;
+     //           copyToIndex++;
+    //        }
+     //   }
+     //   films = tmp;
 
 
-    }
-}
+  //  }
+//}
