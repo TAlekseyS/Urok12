@@ -1,14 +1,14 @@
 public class FilmsRepository {
     private String[] items = new String[0];
-    private int BazaCountMovie;
+    private int bazaCountMovie;
 
-    public FilmsRepository(int BazaCountMovie) {
-        this.BazaCountMovie = BazaCountMovie;
+    public FilmsRepository(int bazaCountMovie) {
+        this.bazaCountMovie = bazaCountMovie;
     }
 
 
     public FilmsRepository() {
-        this.BazaCountMovie = 7;
+        this.bazaCountMovie = 5;
     }
 
     public void add(String movie) {
@@ -26,10 +26,10 @@ public class FilmsRepository {
 
     public String[] findLast() {
         int resultLength;
-        if (items.length < BazaCountMovie) {
+        if (items.length < bazaCountMovie) {
             resultLength = items.length;
         } else {
-            resultLength = BazaCountMovie;
+            resultLength = bazaCountMovie;
         }
         String[] tmp = new String[resultLength];
         for (int i = 0; i < tmp.length; i++) {
